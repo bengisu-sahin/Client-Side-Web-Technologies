@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 Cheat sheet: Examples of HTML5 elements">
+    <meta name="keywords" content "HTML5 tags , Web Design">
+    <title>HTML Cheat Sheet</title>
+</head>
+<body>
+    <!-- Headings -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!--hr tag is a horizontal line which can seperate some parts in an HTML page-->   
+    <hr> 
+
+    <h2 id="Red">Red</h2>
+    <h2 id="Blue">Blue</h2>
+    <h2 id="Black">Black</h2>
+
+    <!-- Paragraph -->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta voluptatum,
+    iure ipsa harum vel necessitatibus? Saepe reiciendis, maiores incidunt nobis
+    labore in sequi magni ducimus odio quisquam veritatis nam eveniet esse at excepturi corporis.
+    Reprehenderit debitis ut amet placeat veniam delectus saepe dolore voluptate
+    vitae, quas, soluta ad modi quibusdam.
+    </p>
+    <p>
+     Lorem ipsum dolor sit, <strong>amet consectetur adipisicing elit.</strong>
+     Reiciendis fugit possimus facere soluta, non minima sit
+     voluptates eius! <em>dolorem iste sed debitis </em>
+     provident nihil dolores odio sunt earum ad?
+    </p>
+    <p>The <abbr title="World Wide Web">WWW</abbr> is awesome :) </p>
+    <hr>
+
+    <!--pre tag is representes preformated text
+    which is to be presented exeactly as written in the
+    HTML file. -->
+    <pre>
+    This is line 1.
+    This is line 2.
+    This is line 3.
+    </pre>    
+    <hr>
+
+    <!--Link-->
+    Google Link Example<a href="https:/google.com/" target="_blank">Go to Google</a>
+    <hr>
+
+    <!--Image map-->
+    <img src="C:\Users\asus\OneDrive\Masaüstü\Github_Repo\Client-Side-Web-Technologies\HTML\Elements_04\workplace.jpg" alt="Workplace" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="#Computer">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="#Phone">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="#Coffee">
+    </map>
+
+    <!-- Lists -->
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Unoredered list item 1</li>
+        <li>Unordered list item 2</li>
+        <li>Unordered list item 3</li>
+    </ul>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Ordered List item 1</li>
+        <li>Ordered List item 2</li>
+        <li>Ordered List item 3</li>
+    </ol>
+    <hr>
+
+    <!--An ordered list where the items are labelerd with capital letters-->
+    <ol type="A"> 
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Black</li>
+    </ol>
+    <hr>
+
+    <!--An ordered list where the starting number is 50-->
+    <ol type="1" start="50">
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Black</li>
+    </ol>
+    <hr>
+    <!-- Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bengisu</td>
+                <td>Şahin</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Lady</td>
+                <td>Gaga</td>
+                <td>36</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <!--A table where a cell spans two columns-->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Bengisu</td>
+            <td>Şahin</td>
+            <td>05555555555</td>
+        </tr>
+    </table>
+    <hr>
+
+    <!--A table where cell spans two rows-->
+    <table>
+        <tr>
+            <th >Name</th>
+            <td>Bengisu Şahin</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>05555555555</td>
+        </tr>
+        <tr>
+            <td>55577855</td>
+          </tr>
+    </table>
+    <hr>
+
+    <!--A table with a caption-->
+    <table>
+        <caption >Calculus grades</caption>
+        <tr>
+            <th>Midterm</th>
+            <th>Final</th>
+        </tr>
+        <tr>
+            <td>90</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr>
+
+    <!-- Forms -->
+    <!-- Both label and input are inline elements -->
+    <form action="operate.php" method="GET">
+        <fieldset>
+            <legend>Personal Data</legend>
+        <label>First Name</label>
+        <input type="text" name="firstName" placeholder="Enter First Name">
+        <br>
+        <br>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" placeholder="Enter Last Name">   
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <br>
+    <hr>
+
+    <!--Text fields with default values specified using the value attribute-->
+    <form action="operate.php" method="get">
+        <fieldset>
+            <legend>Personal Data</legend>
+        <label for="fisrtName">First Name</label>
+        <input type="text" name="firstName" value="Bengisu">
+        <br>
+        <br>
+        
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" value="Şahin">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </fieldset>
+    </form>
+    <br>
+    <hr>
+
+    <!-- Form with a radio button -->
+    <form >
+        <input type="radio" name="gender" value="male" checked>Male<br>
+        <input type="radio" name="gender" value="female"> Female <br>
+        <input type="radio" name="gender" value="other">Other <br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <hr>
+
+    <!-- Form with two check boxes.User choose a lot of option.Its the difference between radio buttons -->
+    <form >
+        <input type="checkbox" name="vehicle1" value="Bike">I have a bike. <br>
+        <input type="checkbox" name="vehicle2" value="Car">I have a car. <br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <!--Button using <input type="button">-->
+    <form >
+        <button type="button" onclick="alert('Button is pressed!')">My Button </button><br>
+        <button type="button" onclick="alert('Login Button is pressed!')"><img src="https://www.freeiconspng.com/uploads/login-button-png-4.jpg" height="40" width="80"></button><br>
+    </form>
+    <hr>
+
+     <!-- Some more HTML5 input elements: email, number, date -->
+     <form>
+        Email: <input type="email" name="email"><br><br>
+        Number: <input type="number" name="number" value="12"><br><br>
+        Date: <input type="date" name="date"><br><br>
+     <input type="submit" value="Submit">
+     </form>
+     <hr>
+
+i     <!-- Drop down list with the select element -->
+     <form >
+        <select name="Brands" >
+            <option value="Gucci" >Gucci</option>
+            <option value="Prada" selected></option>
+            <option value="Zara" selected></option>
+            <option value="Bershka" selected></option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+     </form>
+     <hr>
+
+     <!-- TextArea Example -->
+     <form >
+        <textarea name="message" id="" 
+        cols="30" rows="10">Hello World!</textarea><br>
+        <input type="submit" value="Submit">
+     </form>
+     <hr>
+
+     <!-- div element -->
+     <div style="background-color: coral;color: black;
+     padding: 20px;">
+    <h2>Ankara</h2>
+    <p>Ankara is the capital city of Turkey.</p> 
+    </div>
+
+</body>
+</html>
