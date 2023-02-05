@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Form Exercise -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now ! </title>
+</head>
+<body>
+    <thead>
+        <h1> Please Fill The Form Completely</h1> 
+    </thead>
+    <hr>
+    <form action="register.php">
+        <fieldset>
+            <legend>Account Information </legend> 
+            <table>
+                <tr> 
+                    <td> 
+                     <label for="userName">User Name: </label>
+                     <input type="text" name="userName" value="Enter your user name">
+                 </td> 
+                 </tr>
+                 <tr>
+                     <td>
+                         <label for="email">E-mail: </label>
+                         <input type="email"name="email"  value="Enter your email">
+                     </td>
+                     
+                 </tr>
+                 <tr>
+                     <td>
+                         <label for="password">Password: </label>
+                         <input type="text" name="password" value="Enter your password">
+                     </td>        
+                 </tr>   
+            </table> 
+        
+        </fieldset>
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name: </label> 
+                        <input type="text" name="name" >                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="surname">Surname: </label>
+                        <input type="text" name="surname" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city">City: </label>
+                        <select name="city" id="city">
+                            <option value="Ankara">Ankara</option>
+                            <option value="İzmir">İzmir</option>
+                            <option value="İstabul">İstanbul</option>
+                            <option value="Eskişehir">Eskişehir</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Gender: </label>
+
+                        <input type="radio" value="Male" id="gender">Male
+                        <input type="radio" id="gender" value="Female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="hobby">Hobbies:</label>
+                        <input type="checkbox" value="Cinema" id="hobby">Cinema
+                        <input type="checkbox" value="Reading" id="hobby">Reading
+                        <input type="checkbox" value="Jogging" id="hobby">Jogging
+                    </td>
+                </tr>
+                
+            </table>
+        </fieldset>
+
+        <button type="submit" onclick="alert('Your registration has been completed.')">SUBMIT</button>
+    </form>
+</body>
+</html>
