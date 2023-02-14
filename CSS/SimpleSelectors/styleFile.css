@@ -1,0 +1,24 @@
+*{
+    /* Reset for all elements */
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+p{
+    text-align: center;
+    color: darkred;
+}
+#para1{
+    text-align: center;
+    color: darkslateblue;
+}
+/* p.center would select all <p> elements with class="center" */
+.center{
+    text-align: center;
+    color: hotpink;
+}
+.large{
+    text-align: end;
+    font-size: 2em;  /*1em=16px 2em=32px*/
+}
