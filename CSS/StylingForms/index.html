@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Using CSS to style an HTML Form</h3>
+    <div>
+        <form action="/action_page.php">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="search">Search Input with Icon</label>
+            <input type="text" id="search" name="keyword" placeholder="Keyword to search..">
+
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="Turkey">Turkey</option>
+                <option value="usa">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Greece">Greece</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea name="subject" id="subject" style="height:200px" placeholder="Write something.."></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

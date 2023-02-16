@@ -1,0 +1,30 @@
+div{
+    background-image: url("Springbackground.jpg");
+    background-repeat: repeat-x; /*how the background image is will be represent?*/
+}
+h1{
+    max-width: 80%;
+    width: 80%;
+    padding: 0.8em;
+    text-align: center;
+    background-color: antiquewhite;
+    color: indianred;
+}
+.a{
+    max-width: 50%;
+    border: 1em darkred;
+    color: brown;
+    text-indent: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; /*fall back system for browset*/
+    font-size: 2em;
+}
+.b{
+    max-width: 75%;
+    border:  1em darkred;
+    color:  brown;
+    text-indent: 100px;
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5em;  
+}

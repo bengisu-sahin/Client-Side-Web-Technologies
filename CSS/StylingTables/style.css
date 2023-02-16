@@ -1,0 +1,43 @@
+/* TABLE 1 STYLING */
+
+table.table1,table.table1 th,table.table1 td{
+    border: 3px solid midnightblue;
+}
+
+
+/* TABLE 2 STYLING */
+.table2{
+    border-collapse: collapse;
+    width: 50%;
+}
+.table2,.table2 th,.table2 td{
+    border: 3px solid chocolate;
+    padding: 0.25em;
+}
+.table2 th{
+height: 50px;
+text-align: left; /*default value is center*/
+vertical-align: bottom; /*default value is middle*/
+}
+
+/* TABLE 3 STYLING */
+.table3 {
+    border-collapse: collapse;
+    width: 75%;
+}
+.table3 th{
+    border-top: 2px solid  black;
+    background-color: #4CAF50;
+    color: white;
+}
+.table3 th, .table3 td{
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding: 0.25em;
+}
+.table3 tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.table3 tr:hover{
+    background-color: #baecea;
+}

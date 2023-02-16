@@ -1,0 +1,26 @@
+ul{
+    width: 30%;
+    background: lightpink;
+    color: darkred;
+    /*list-style-type:none --> use this to remove any styling*/
+    list-style-image: url(squarePurple.jpg);
+}
+
+ul.drinks{
+    width: 50%;
+    padding: 20px;
+    list-style-image: none;
+    list-style-type: square;
+    list-style-position: outside;
+    color: blueviolet;
+    
+}
+
+ul.drinks li{
+    background: #cce5ff;
+    margin: 5px;
+}
+
+ul.drinks li:hover{
+    background: yellowgreen;
+}
