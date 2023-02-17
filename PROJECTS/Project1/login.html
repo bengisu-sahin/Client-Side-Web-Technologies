@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .container {
+            background-color: #e2dddd;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 5px 10px #888888;
+            border-radius: 5px;
+        }
+
+        .socialMediaButtons {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: auto;
+            background-color: white;
+            text-align: center;
+
+        }
+
+        .google {
+            border: 2px solid red;
+            color: red;
+        }
+
+        .facebook {
+            border: 2px solid blue;
+            color: blue;
+        }
+
+        .linkedin {
+            border: 2px solid blue;
+            color: blue;
+        }
+        .textField{
+            border-radius: 3px 3px 3px 3px;
+            background-color: white;
+            color: darkgrey;
+            border: none;
+          
+            margin:  10px 10px 10px 10px;
+            width: 85%;
+            padding: 5px;
+            box-sizing: border-box
+        }
+        
+        #submitField{
+            border-radius: 3px 3px 3px 3px;
+            color: black;
+            background-color: chartreuse;
+            border: 1px solid black;
+            width: 85%;
+            padding: 5px;
+            margin:  10px 10px 10px 10px;
+            
+            
+        }
+        #submitField:hover , .facebook:hover{
+            color: white;
+            background-color: green;
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="loginTitle">Login</h1>
+        
+        <!-- Social Media Buttons -->
+        <input class="socialMediaButtons google" type="button" value="G">
+        <input class="socialMediaButtons facebook" type="button" value="f">
+        <input class="socialMediaButtons linkedin" type="button" value="in">
+
+        <!-- Text Fields -->
+        <input class="textField email" type="email" name="email" id="email" placeholder="Your email">
+        <input class="textField password" type="password" name="password" id="password" placeholder="Password">
+
+        <!-- Submit Button -->
+        <input id="submitField" type="button" value="Submit">
+    </div>
+</body>
+
+</html>
