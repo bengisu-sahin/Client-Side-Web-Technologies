@@ -2,4 +2,4 @@
 This repository is opened to learn front-end web technologies.
 
 ## Projects
--[Project 1](project 1)
+-[Project 1](#project 1)
