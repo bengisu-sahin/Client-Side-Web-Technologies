@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .container {
+            width: 75%;
+            background-color: #e2dddd;
+            margin: auto;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        .cards {
+            width: 45%;
+            height: 290px;
+            background-color: white;
+            display: inline-block;
+            margin: 25px 25px 25px 25px;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 10px;
+
+        }
+
+        .cards_one {
+            /* margin: 50px 50px 50px 50px; */
+        }
+
+        .cards_two {
+            /* margin: 50px 50px 50px 50px; */
+        }
+
+        .picture {
+            width: 100%;
+            height: 230px;
+            border-radius: 10px;
+        }
+
+        .iconsSection {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            background-color: whitesmoke;
+            opacity: 0.7;
+            border-radius: 10px;
+            color: black;
+            display: inline;
+        }
+
+        .textMIN {
+            display: inline;
+            font-size: 18px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 2.5rem;
+        }
+
+        .text {
+            line-height: 0.5px;
+            font-size: medium;
+            margin-left: 25px;
+            padding: 0;
+            margin-top: 0;
+        }
+
+        .details{
+            background-color: lavender;
+            border: 2px solid purple;
+            border-radius: 10px;
+            color: purple;
+            position: absolute;
+            right: 50px;
+            bottom:  20px;
+        }
+        .details:hover{
+            background-color: green;
+            color: white;
+            border: 2px solid green;
+        }
+        .recipe-name{
+            line-height: 0.5px;
+            display: inline-block;
+            margin-left: 25px;
+            padding: 0;
+            margin-top: 0;
+            font-weight: bold;
+        }
+        .cooker{
+            line-height: 0.5px;
+            
+            margin-left: 25px;
+            padding: 0;
+            margin-top: 15px;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Title -->
+        <h1 id="title">Recipes</h1>
+
+        <!-- Card 1 -->
+        <div class="cards card_one">
+            <img class="picture" src="stew.jpg" alt="Bean Chili Stew Picture">
+            <div class="iconsSection">
+
+                <i class="material-icons">access_time</i>
+                <p class="textMIN">25 MINS </p>
+
+            </div>
+            <footer class="footer">
+                <div class="recipe-name">5 Bean Chili Stew</div> 
+                <div class="cooker">Recipe by Mehmet</div>
+                <button class="details">Details</button>
+            </footer>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cards card_two">
+            <img class="picture" src="curry.jpg" alt="Tofu Curry Picture">
+            <div class="iconsSection">
+                <i class="material-icons">access_time</i>
+                <p class="textMIN">40 MINS</p>
+            </div>
+            <footer class="footer">
+                <div class="recipe-name">Tofu Curry</div> 
+                <div class="cooker">Recipe by Ayse</div>
+                <button class="details">Details</button>
+            </footer>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

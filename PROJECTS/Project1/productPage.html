@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Uno</title>
+    <style>
+        .container {
+            width: 75%;
+            background-color: white;
+            margin: auto;
+            height: auto;
+
+        }
+
+        .blueLine {
+            border-left: 5px solid blue;
+            height: 30px;
+        }
+
+        .greenLine {
+            border-left: 5px solid green;
+            height: 30px;
+        }
+
+        #ArduinoPic {
+            width: 563.7px;
+            height: 400px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #productName {
+            display: inline-block;
+            position: relative;
+            top: 0px;
+            right: 50px;
+            left: 50px;
+            justify-content: center;
+
+        }
+
+        .lines {
+            position: absolute;
+            left: 50%;
+            height: 30px;
+            top: 10%;
+            font-size: medium;
+        }
+
+        .featuresOFArdunio {
+            display: block;
+        }
+
+        .generalFeatures {
+            background-color: #e2dddd;
+        }
+
+        .markaText {
+            color: deepskyblue;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .kdvText {
+            font-size: large;
+            color: deepskyblue;
+            font-weight: bold;
+        }
+
+        .shoppingListText {
+            color: green;
+            font-weight: bold;
+        }
+
+        .numberOfArduino {
+            position: relative;
+            left: 10px;
+        }
+
+        .plus-button {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            float: left;
+
+        }
+
+        .minus-button {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            float: left;
+        }
+
+        .quantity-input {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            float: left;
+        }
+
+        .addtoBasket {
+            display: inline-block;
+            width: 120px;
+            height: 30px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            left: 20px;
+            background-color: green;
+            color: white;
+        }
+
+        .addtoBasket:hover {
+            background-color: blue;
+        }
+
+        .detailsFeaturesTitles {
+            color: #2C74B3;
+        }
+
+        .technicalDetails th,
+        td {
+            border: 1px solid silver;
+            padding: 15px;
+            text-align: left;
+            margin: 0;
+        }
+
+        .technicalDetails table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .technicalDetails th {
+            background-color: #EEEEEE;
+        }
+
+        .technicalDetails tr:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body class="b">
+    <div class="container">
+
+        <div class="generalFeatures">
+
+            <img id="ArduinoPic" src="arduino.jpg" alt="Arduino Uno Picture">
+
+            <h3 id="productName">Orijinal Arduino Uno Mini - Limited Edition</h3>
+            <div class="lines">
+                <div class="blueLine "> Marka/Menşei:
+                    <p class="markaText">Arduino</p>
+                </div>
+                <br>
+                <div class="greenLine"> Stok Kodu: 20530</div>
+                <br>
+                <div class="blueLine"> 765,66 TL + KDV</div>
+                <br>
+                <div class="greenLine kdvText"> 903,48 KDV Dahil</div>
+                <br>
+                <div class="blueLine">
+                    <div class="numberOfArduino">
+                        <button class="minus-button">-</button>
+                        <input type="number" class="quantity-input" value="1">
+                        <button class="plus-button">+</button>
+                        <button class="addtoBasket">Sepete Ekle</button>
+                    </div>
+                </div>
+                <br>
+                <div class="greenLine shoppingListText"> * Alışveriş Listeme Ekle</div>
+                <br>
+            </div>
+
+        </div>
+
+        <div class="ArdunioFetauresDetails">
+            <h3 class="detailsFeaturesTitles">Orijinal Ardunio Uno Mini Özellikleri</h3>
+            <hr>
+            <ul class="featuresOFArdunio">
+                <li>6 adet PWM çıkışı sağlayan 14 dijital I/o pini</li>
+                <li>6 analog giriş pini</li>
+                <li>16MHz seramik rezonatör</li>
+                <li>USB-C bağlantı noktası</li>
+                <li>USB veya harici bir güç kaynağı ile çalışır</li>
+                <li>Yeniden başlatma tuşu</li>
+                <li>Anahtar bileşenler</li>
+                <li>Mikroçip Teknolojisi ATmega328 MCU</li>
+                <li>USB Denetleyicili Mikroçip Teknolojisi ATmega16U2 MCU</li>
+            </ul>
+        </div>
+
+        <div class="technicalDetails">
+            <h3 class="detailsFeaturesTitles">Teknik Özellikler</h3>
+            <hr>
+            <table>
+                <tr>
+                    <th>Üretici Firma</th>
+                    <th>Arduino</th>
+                </tr>
+                <tr>
+                    <td>SRAM</td>
+                    <td>2KB</td>
+                </tr>
+                <tr>
+                    <td>Ürün Boyutları</td>
+                    <td>10.9 x 9.09 x 5 cm</td>
+                </tr>
+                <tr>
+                    <td>Ürün Ağırlığı</td>
+                    <td>73.6 g</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
