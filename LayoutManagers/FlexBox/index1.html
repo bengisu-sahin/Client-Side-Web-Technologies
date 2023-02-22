@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexboxt</title>
+    <style>
+        div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-container1 {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: dodgerblue;
+        }
+
+        .flex-container1>div,
+        .flex-container2>div,
+        .flex-container3>div {
+            width: 100px;
+        }
+        .flex-container2{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: dodgerblue;
+        }
+        .flex-container3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: dodgerblue;
+        }
+        #one{
+            order: 3;
+        }
+        #two{
+            order: 4;
+        }
+        #three {
+        order: 1;
+    }
+
+    #four {
+        order: 2;
+    }  
+    </style>
+</head>
+
+<body>
+    <div class="flex-container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <hr>
+    <!-- With flex-container2, wrap is enabled. So the items will wrap to the next row -->
+    <div class="flex-container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8 8 8 8 8 8 8 8 </div>
+    </div>
+    <hr>
+
+    <!-- flex-container3 stacks the items vertically -->
+    <div class="flex-container3">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    <hr>
+
+    <!-- Will change the order of the flex items from the CSS -->
+    <div class="flex-container2">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+    </div>
+
+    <hr>
+
+    <!-- This will make the size of each item to be as indicated in flex-grow -->
+    <div class="flex-container1">
+        <div style="flex: 1">1</div>
+        <div style="flex: 2">2</div>
+        <div style="flex: 4">3</div>
+        <div style="flex: 1">4</div>
+    </div>
+</body>
+
+</html>
