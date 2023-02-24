@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Form Elements: Radio Buttons</title>
+        <!-- These two are for responsive pages -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+            that make use of Javascript such as modals, tooltips, popovers etc.
+            However, if you just use the CSS part of Bootstrap, you don't need them. -->
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	  <h2>Form control: radio buttons</h2>
+	  <p>The form below contains three radio buttons. The first option is checked by default, and the last option is disabled:</p>
+
+	  <form action="#">
+
+		<div class="form-check">
+		  <label class="form-check-label" for="radio1">
+			<input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Option 1
+		  </label>
+		</div>
+
+		<div class="form-check">
+		  <label class="form-check-label" for="radio2">
+			<input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Option 2
+		  </label>
+		</div>
+
+		<div class="form-check">
+		  <label class="form-check-label">
+			<input type="radio" class="form-check-input" disabled>Option 3
+		  </label>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+	</div>
+
+	<hr>
+
+	<div class="container">
+	  <h2>Form control: inline radio buttons</h2>
+	  <p>The form below contains three inline radio buttons. The first option is checked by default, and the last option is disabled:</p>
+
+	  <form action="#">
+		<div class="form-check-inline">
+		  <label class="form-check-label" for="radio1">
+			<input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Option 1
+		  </label>
+		</div>
+
+		<div class="form-check-inline">
+		  <label class="form-check-label" for="radio2">
+			<input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Option 2
+		  </label>
+		</div>
+
+		<div class="form-check-inline">
+		  <label class="form-check-label">
+			<input type="radio" class="form-check-input" disabled>Option 3
+		  </label>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+	</div>
+
+</body>
+</html>

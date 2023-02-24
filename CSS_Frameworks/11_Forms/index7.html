@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Form Elements: Size</title>
+        <!-- These two are for responsive pages -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+            that make use of Javascript such as modals, tooltips, popovers etc.
+            However, if you just use the CSS part of Bootstrap, you don't need them. -->
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	  <h2>Form Control Sizing</h2>
+	  <p>Change the size of the form control with .form-control-sm or .form-control-lg:</p>
+
+	  <form action="#">
+		<div class="form-group">
+		  <input type="text" class="form-control form-control-sm" placeholder="Small form control" name="text1">
+		</div>
+
+		<div class="form-group">
+		  <input type="text" class="form-control" placeholder="Default form control" name="text2">
+		</div>
+
+		<div class="form-group">
+		  <input type="text" class="form-control form-control-lg" placeholder="Large form control" name="text3">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+	</div>
+
+	<hr>
+
+	<div class="container">
+	  <h2>Form Control Plain Text</h2>
+	  <p>Use the .form-control-plaintext if you want to style the input field as plain text:</p>
+
+	  <form action="#">
+		<div class="form-group">
+		  <input type="text" class="form-control" placeholder="Default form control" name="text1">
+		</div>
+
+		<div class="form-group">
+		  <input type="text" class="form-control-plaintext" placeholder="Form control with plain text" name="text2">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+	</div>
+
+	<hr>
+
+	<div class="container">
+	  <h2>Form Control Range and File</h2>
+	  <p>Add the .form-control-range class to input type"range" or .form-control-file to input type"file" to style a range control or a file field with full-width:</p>
+
+	  <form action="#">
+		<div class="form-group">
+		  <input type="range" class="form-control-range" name="range">
+		</div>
+
+		<div class="form-group">
+		  <input type="file" class="form-control-file border" name="file">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+	</div>
+
+	<p style="height: 50px;"></p>
+
+
+</body>
+</html>

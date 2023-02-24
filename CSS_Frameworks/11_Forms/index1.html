@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Forms</title>
+        <!-- These two are for responsive pages -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+            that make use of Javascript such as modals, tooltips, popovers etc.
+            However, if you just use the CSS part of Bootstrap, you don't need them. -->
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Stacked form</h2>
+
+        <form action="#">
+          <!-- You must put each input element inside a div with form-group class -->
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+          </div>
+
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember"> Remember me
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <hr>
+
+	<div class="container">
+	  <h2>Inline form</h2>
+	  <p>Make the viewport larger to see that all of the form elements are inline and left-aligned.</p>
+	  <form class="form-inline" action="#">
+		<label for="email2" class="mb-2 mr-sm-2">Email:</label>
+		<input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email">
+		<label for="pwd2" class="mb-2 mr-sm-2">Password:</label>
+		<input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd">
+		<div class="form-check mb-2 mr-sm-2">
+		  <label class="form-check-label">
+			<input type="checkbox" class="form-check-input" name="remember"> Remember me
+		  </label>
+		</div>
+		<button type="submit" class="btn btn-primary mb-2">Submit</button>
+	  </form>
+	</div>
+</body>
+</html>
