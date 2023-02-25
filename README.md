@@ -60,8 +60,7 @@ Following the header comes the first main section that contains 6 items. Each it
 The third section contains some information about how things work. This section has a dark background, a header centered in the section and some images and text as shown on the left. When the screen size goes from large to medium as shown in the middle, this section totally changes. The curvy dashed line images that connect other images now disappear from the view, and the other images and the text below these images go into a 2-row by 2-column format. For the small screen, this section moves to a 4-row by 1-column format as shown on the right.
 The last main section contains 4 cards, each giving information about different registration and payment plans. Again, all 4 card components are laid-out in a single line for large screens. For medium screens, we have a 2x2 layout, and for small screens we have a 4x1 layout as seen from the figures. The card components make use of the “check” icon. For this I used bootstrap icons. You can include bootstrap icons into your page as follows:
     
-    ![image](https://user-images.githubusercontent.com/71591780/221375184-e1136551-9147-48cb-8584-e417ccee1f8c.png)
-
+   ![image](https://user-images.githubusercontent.com/71591780/221375268-60ea7c5f-617a-4237-9634-2aae81061b6c.png)
     
 You can then use the “check” icon as follows:
 
