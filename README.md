@@ -38,3 +38,31 @@ In this problem you are asked to implement the following product page (name your
 
 As always, the page must be centered inside a container that occupies 60% of the entire screen. The page starts with an image (arduino.jpg that is given with the project) and then a component that gives some information about the product such as the product’s name, where it comes from, Stock code, price etc. Pay special attention to the vertical blue and green bars at different lines of this component. The way to do this is to view each line as a box and put a thick left border with the specified color to the box.
 Below the top image + info component is another component that contains a simple unordered list giving some details about the product. The component at the bottom is a table that has 2 columns and 4 rows. Notice how the odd/even rows of the table have different background colors (striped). Also notice that the table rows have a “hover” effect. In the example given above, the mouse is on the third row, which turns the background color to some shade of gray and the text color to white. Your page must have the same behavior. You must also add the hover effect to the “Sepete Ekle” button. Specifically, the background color of this button must turn blue when the mouse is over it.
+
+
+### Project 2
+#### Problem 1: Implement a Responsive Landing Page
+In this problem, you are asked to implement a responsive landing page for three screen sizes (name your page landingPage.html):
+Screen Size	Pixels
+Small	 < 768
+Medium	768-992
+Large	> 992
+
+The page consists of 5 sections: A header, 3 main sections, and a footer, all stacked vertically on top of each other. Here is how the page will look like for different screen sizes:
+       
+As you can see from the figures, the page starts with a header section that has a background image and some text and a button centered on the page. The height of this section is 630px for all screen sizes. Here is how you can insert the background into the header section:
+            background: linear-gradient(rgb(40, 42, 53, 0.90),rgb(40, 42, 53, 0.90)),url('img/bg-img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+
+Make the header a flex container so that you can easily center the text & the button. Also notice that for the small screen size, the font-sizes of the text on top of the background image gets smaller so that it fits on a single line. You must write the necessary @media queries to achieve this.
+Following the header comes the first main section that contains 6 items. Each item here contains a header centered inside the container and some text that comes below the header. For large screen size, the first 3 items reside on the first line and the last 3 on the second line. For the medium screen sizes, we have 3 rows each containing 2 items. Finally, for the small screen size, we have 6 rows each containing one item. This is how your page must respond to different screen sizes.
+The third section contains some information about how things work. This section has a dark background, a header centered in the section and some images and text as shown on the left. When the screen size goes from large to medium as shown in the middle, this section totally changes. The curvy dashed line images that connect other images now disappear from the view, and the other images and the text below these images go into a 2-row by 2-column format. For the small screen, this section moves to a 4-row by 1-column format as shown on the right.
+The last main section contains 4 cards, each giving information about different registration and payment plans. Again, all 4 card components are laid-out in a single line for large screens. For medium screens, we have a 2x2 layout, and for small screens we have a 4x1 layout as seen from the figures. The card components make use of the “check” icon. For this I used bootstrap icons. You can include bootstrap icons into your page as follows:
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+You can then use the “check” icon as follows:
+i class="bi bi-check"></i>
+
+Finally, there is a footer section at the bottom of the page that spans the full width of the screen for all screen sizes.
