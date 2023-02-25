@@ -53,7 +53,7 @@ The page consists of 5 sections: A header, 3 main sections, and a footer, all st
    
 As you can see from the figures, the page starts with a header section that has a background image and some text and a button centered on the page. The height of this section is 630px for all screen sizes. Here is how you can insert the background into the header section:
 
-![image](https://user-images.githubusercontent.com/71591780/221375162-5616c8a0-84a8-4ff5-9a40-f78d4c1e10cb.png)
+![image](https://user-images.githubusercontent.com/71591780/221375350-d333dbad-ee21-403b-b5fc-f8fc8e7d34c1.png)
 
 Make the header a flex container so that you can easily center the text & the button. Also notice that for the small screen size, the font-sizes of the text on top of the background image gets smaller so that it fits on a single line. You must write the necessary @media queries to achieve this.
 Following the header comes the first main section that contains 6 items. Each item here contains a header centered inside the container and some text that comes below the header. For large screen size, the first 3 items reside on the first line and the last 3 on the second line. For the medium screen sizes, we have 3 rows each containing 2 items. Finally, for the small screen size, we have 6 rows each containing one item. This is how your page must respond to different screen sizes.
