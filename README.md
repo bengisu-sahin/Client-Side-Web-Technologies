@@ -49,7 +49,7 @@ In this problem, you are asked to implement a responsive landing page for three 
 
 The page consists of 5 sections: A header, 3 main sections, and a footer, all stacked vertically on top of each other. Here is how the page will look like for different screen sizes:
 
-![image](https://user-images.githubusercontent.com/71591780/221375152-f1d5e4a0-66ed-493a-acb8-94c7b5901990.png)
+![image](https://user-images.githubusercontent.com/71591780/221375315-e528caca-22a4-422b-aaac-7b34680a4964.png)
    
 As you can see from the figures, the page starts with a header section that has a background image and some text and a button centered on the page. The height of this section is 630px for all screen sizes. Here is how you can insert the background into the header section:
 
