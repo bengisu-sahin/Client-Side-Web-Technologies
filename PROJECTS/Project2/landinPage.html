@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Simple Page with Bootstrap 4</title>
+    <!-- These two are for responsive pages -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+            that make use of Javascript such as modals, tooltips, popovers etc.
+            However, if you just use the CSS part of Bootstrap, you don't need them. -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Landing Page</title>
+    <style>
+        .header {
+            background: linear-gradient(#282a35e6, rgb(40, 42, 53, 0.90)), url('bg-img.jpg');
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            height: 630px;
+        }
+
+        .main2 {
+            background-color: #282A36;
+            height: 524px;
+            display: grid;
+            grid-template-columns: 1fr;
+            /* tek bir sütun oluşturuyoruz */
+            grid-template-rows: 1fr 1fr 1fr;
+            /* iki satır oluşturuyoruz */
+        }
+
+        .main2Header {
+            padding: 0px 0px 0px 0px;
+            position: relative;
+            top: 50px;
+            text-align: center;
+        }
+
+        .workSchema {
+            position: relative;
+            top: 150px;
+        }
+
+        .rowPosition {
+            position: relative;
+            top: 150px;
+        }
+
+        .txtPosition {
+            box-sizing: border-box;
+            position: relative;
+            top: 20px;
+            left: 100px;
+        }
+
+        @media screen and (max-width: 991px) {
+            .line {
+                display: none;
+            }
+
+            .line-div {
+                display: none;
+            }
+
+            .first-pic {}
+
+            .second-pic {}
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Header Part of the Page -->
+    <div class="container-fluid header">
+
+        <div class="d-flex h-100 flex-column text-center  text-white justify-content-center">
+            <h1 class="font-weight-bold">Create a Free Website</h1>
+            <p>Everything you need right in the browser.</p>
+            <p>Build your own website.It is easy to use - try it!</p>
+            <div class="btn-centered text-center">
+                <button type="button" class="btn btn-success btn-rounded btn-default rounded-pill ">Get started for
+                    free</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- First Main Part of the Page -->
+    <div class="container main1">
+        <div class="row justify-content-center text-center my-4">
+
+            <div class=" col-sm-12 col-md-6 col-lg-4">
+                <h3 class="text-success "> Website </h3>
+                <p class="text-secondary small">Create your own website and share it with others</p>
+            </div>
+            <div class=" col-sm-12 col-md-6 col-lg-4">
+                <h3 class="text-success"> Code Editor</h3>
+                <p class="text-secondary small">Code directly in your browser</p>
+            </div>
+            <div class=" col-sm-12 col-md-6 col-lg-4">
+                <h3 class="text-success">File Manager</h3>
+                <p class="text-secondary small">Start with ready-to-use designs and structures</p>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h3 class="text-success">Playground</h3>
+                <p class="text-secondary small">Upload and handle files in your browser</p>
+            </div>
+            <div class=" col-sm-12 col-md-6 col-lg-4">
+                <h3 class="text-success "> Website </h3>
+                <p class="text-secondary small">Learn, test, and go live with your space</p>
+            </div>
+            <div class=" col-sm-12 col-md-6 col-lg-4">
+                <h3 class="text-success"> Website </h3>
+                <p class="text-secondary small">Playground for HTML, CSS and JavaScript</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Second Main Part of the Page -->
+      <div class="main2">
+        <div class="container-fluid">
+             <h3 class="col-lg-12 col-md-12 col-sm-12 text-white font-weight-bold my-50 text-center main2Header">How it works</h3> 
+            <div class="row ">
+                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center "></div>
+                <div class="col-lg col-md-6 col-md-6 justify-content-center align-items-center first-pic col">
+                    <div class="row">
+                        <img  src="../Project2/P1-img/img1.svg">
+                    </div>
+
+                </div>
+                <div class="col d-flex flex-column justify-content-center align-items-center line-div">
+                    <img class="line" src="../Project2/P1-img/img2.svg">
+                </div>
+
+                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center second-pic">
+                    <div class="row">
+                        <img  src="../Project2/P1-img/img3.svg">
+
+                    </div>
+
+                </div>
+                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img class="line" src="../Project2/P1-img/img4.svg">
+                </div>
+                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <div class="row">
+                        <img  src="../Project2/P1-img/img5.svg">
+                    </div>
+
+                </div>
+                <div class=" d-flex flex-column justify-content-center align-items-center">
+                    <img class="line" src="../Project2/P1-img/img2.svg">
+                </div>
+                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <div class="row">
+                        <img src="../Project2/P1-img/img6.svg">
+                    </div>
+                </div>
+            </div>
+               <div class="col d-flex flex-column justify-content-center align-items-center"></div> 
+                <div class="row ">
+                    <div class="col-lg col-md-6">
+                        <p class="txtPosition text-white text-center">1.Join and create a space</p>
+                    </div>
+                    <div class="col-lg col-md-6>
+                        <p class="txtPosition text-white text-center">2.Choose a template - or start from scratch</p>
+                    </div>
+                    <div class="col-lg col-md-6">
+                        <p class="txtPosition text-white text-center">3.Edit code directly in your browser</p>
+                    </div>
+                    <div class="col-lg col-md-6 ">
+                        <p class="txtPosition text-white text-center">4.Share your website with the world</p>
+                    </div>
+                </div>
+            
+
+        </div> 
+ 
+
+  <!--  <div class="container-fluid main2">
+        <div class="row">
+            <div class="col-lg col-md-6"></div>
+            <div class="col-lg col-md-6">
+                <img  src="../Project2/P1-img/img1.svg">
+            </div>
+            <div class="col-lg line">
+                <img  src="../Project2/P1-img/img2.svg">
+            </div>
+            <div class="col-lg col-md-6"><img  src="../Project2/P1-img/img3.svg"></div>
+            <div class="col-lg line"><img  src="../Project2/P1-img/img4.svg"></div>
+            <div class="col-lg col-md-6"><img  src="../Project2/P1-img/img5.svg"></div>
+            <div class="col-lg line"><img  src="../Project2/P1-img/img4.svg"></div>
+            <div class="col-lg col-md-6"><img  src="../Project2/P1-img/img6.svg"></div>
+            
+            <div class="col-lg col-md-6"></div>
+
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>-->
+
+    <!-- Third Main Part of the Page -->
+    <div class="container main3"></div>
+
+
+    <!-- Footer Part of the Page -->
+    <div class="container footer"></div>
+
+</body>
+
+</html>
