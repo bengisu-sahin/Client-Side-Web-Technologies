@@ -22,6 +22,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Landing Page</title>
     <style>
         .header {
@@ -29,41 +30,47 @@
             background-size: cover;
             background-position: 50%;
             background-repeat: no-repeat;
-            height: 630px;
+            height: auto;
         }
 
         .main2 {
             background-color: #282A36;
             height: 524px;
             display: grid;
-            grid-template-columns: 1fr;
-            /* tek bir sütun oluşturuyoruz */
-            grid-template-rows: 1fr 1fr 1fr;
-            /* iki satır oluşturuyoruz */
+        }
+
+        .main3 {
+
+            background-color: #EEEEEE;
+            height: auto;
         }
 
         .main2Header {
             padding: 0px 0px 0px 0px;
+
+            text-align: center;
             position: relative;
             top: 50px;
-            text-align: center;
-        }
-
-        .workSchema {
-            position: relative;
-            top: 150px;
         }
 
         .rowPosition {
+            grid-auto-rows: max-content;
             position: relative;
-            top: 150px;
+            top: 100px;
         }
 
-        .txtPosition {
-            box-sizing: border-box;
-            position: relative;
-            top: 20px;
-            left: 100px;
+        @media screen and (max-width:767) {
+            .line {
+                display: none;
+            }
+
+            .line-div {
+                display: none;
+            }
+
+            .spaceBox {
+                display: none;
+            }
         }
 
         @media screen and (max-width: 991px) {
@@ -75,15 +82,84 @@
                 display: none;
             }
 
-            .first-pic {}
+            .spaceBox {
+                display: none;
+            }
 
-            .second-pic {}
+            .box1 {
+                position: relative;
+                top: 25%;
+                right: 5%;
+            }
+
+            .box2 {
+                position: relative;
+                top: 50px;
+                right: 5%;
+            }
+        }
+
+        .img-rows {
+            box-sizing: border-box;
+            position: relative;
+            top: 50px;
+            left: 30px;
+            right: 30px;
+            bottom: 50px;
+        }
+
+        .t {
+            box-sizing: border-box;
+            color: white;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            font-size: smaller;
+            white-space: nowrap;
+            position: relative;
+            top: 15px;
+            left: 0px;
+            max-width: 180px;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .card {
+
+            box-sizing: border-box;
+            margin: 20px 20px 20px 20px;
+            border-radius: 10px;
+
+        }
+
+        .card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card i {
+            color: darkgreen;
+            margin: .25rem;
+
+            border-radius: 50%;
+            background-color: #D6EADE;
+        }
+
+        .introTxt {
+            font-weight: 600;
+        }
+
+        .footerTxt {
+            text-align: center;
+            color: rgb(183, 178, 178);
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-
 
     <!-- Header Part of the Page -->
     <div class="container-fluid header">
@@ -134,95 +210,137 @@
         </div>
     </div>
 
-    <!-- Second Main Part of the Page -->
-      <div class="main2">
+    <div class="main2">
         <div class="container-fluid">
-             <h3 class="col-lg-12 col-md-12 col-sm-12 text-white font-weight-bold my-50 text-center main2Header">How it works</h3> 
-            <div class="row ">
-                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center "></div>
-                <div class="col-lg col-md-6 col-md-6 justify-content-center align-items-center first-pic col">
-                    <div class="row">
-                        <img  src="../Project2/P1-img/img1.svg">
-                    </div>
+            <h3 class="col-lg-12 col-md-12 col-sm-12 text-white font-weight-bold my-50 text-center main2Header">How it
+                works</h3>
+
+            <div class="row rowPosition">
+                <div class="col-lg col-md-6 align-items-center justify-content-center spaceBox"></div>
+                <div class="col-lg col-md-6 align-items-center justify-content-center d-flex flex-column box1">
+
+                    <img class="imgPosition" src="../Project2/P1-img/img1.svg" alt="">
+
+                    <p class="t ">1.Join and create a space</p>
 
                 </div>
-                <div class="col d-flex flex-column justify-content-center align-items-center line-div">
-                    <img class="line" src="../Project2/P1-img/img2.svg">
-                </div>
 
-                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center second-pic">
-                    <div class="row">
-                        <img  src="../Project2/P1-img/img3.svg">
+                <img class="imgPosition line" src="../Project2/P1-img/img2.svg" alt="">
 
-                    </div>
+                <div class="col-lg col-md-6 align-items-center justify-content-center d-flex flex-column box1">
+                    <img class="imgPosition" src="../Project2/P1-img/img3.svg" alt="">
+
+                    <p class="t ">2.Choose a template - or start from scratch</p>
 
                 </div>
-                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center">
-                    <img class="line" src="../Project2/P1-img/img4.svg">
-                </div>
-                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center">
-                    <div class="row">
-                        <img  src="../Project2/P1-img/img5.svg">
-                    </div>
+
+                <img class="imgPosition line" src="../Project2/P1-img/img4.svg" alt="">
+
+
+                <div class="col-lg col-md-6 align-items-center justify-content-center d-flex flex-column box2">
+                    <img class="imgPosition" src="../Project2/P1-img/img5.svg" alt="">
+
+                    <p class=" t  ">3.Edit code directly in your browser</p>
 
                 </div>
-                <div class=" d-flex flex-column justify-content-center align-items-center">
-                    <img class="line" src="../Project2/P1-img/img2.svg">
+
+                <img class="line" src="../Project2/P1-img/img2.svg" alt="">
+
+                <div class="col-lg col-md-6 align-items-center justify-content-center d-flex flex-column box2">
+                    <img class="imgPosition" src="../Project2/P1-img/img6.svg" alt="">
+
+                    <p class="t  ">4.Share your website with the world</p>
+
                 </div>
-                <div class="col-lg col-md-6 d-flex flex-column justify-content-center align-items-center">
-                    <div class="row">
-                        <img src="../Project2/P1-img/img6.svg">
-                    </div>
-                </div>
+                <div class="col-lg col-md-6 align-items-center justify-content-center spaceBox"></div>
             </div>
-               <div class="col d-flex flex-column justify-content-center align-items-center"></div> 
-                <div class="row ">
-                    <div class="col-lg col-md-6">
-                        <p class="txtPosition text-white text-center">1.Join and create a space</p>
-                    </div>
-                    <div class="col-lg col-md-6>
-                        <p class="txtPosition text-white text-center">2.Choose a template - or start from scratch</p>
-                    </div>
-                    <div class="col-lg col-md-6">
-                        <p class="txtPosition text-white text-center">3.Edit code directly in your browser</p>
-                    </div>
-                    <div class="col-lg col-md-6 ">
-                        <p class="txtPosition text-white text-center">4.Share your website with the world</p>
-                    </div>
-                </div>
-            
 
-        </div> 
- 
-
-  <!--  <div class="container-fluid main2">
-        <div class="row">
-            <div class="col-lg col-md-6"></div>
-            <div class="col-lg col-md-6">
-                <img  src="../Project2/P1-img/img1.svg">
-            </div>
-            <div class="col-lg line">
-                <img  src="../Project2/P1-img/img2.svg">
-            </div>
-            <div class="col-lg col-md-6"><img  src="../Project2/P1-img/img3.svg"></div>
-            <div class="col-lg line"><img  src="../Project2/P1-img/img4.svg"></div>
-            <div class="col-lg col-md-6"><img  src="../Project2/P1-img/img5.svg"></div>
-            <div class="col-lg line"><img  src="../Project2/P1-img/img4.svg"></div>
-            <div class="col-lg col-md-6"><img  src="../Project2/P1-img/img6.svg"></div>
-            
-            <div class="col-lg col-md-6"></div>
 
         </div>
-        <div class="row"></div>
-        <div class="row"></div>
-    </div>-->
+
+    </div>
 
     <!-- Third Main Part of the Page -->
-    <div class="container main3"></div>
-
+    <div class="container-fluid main3">
+        <div class="row">
+            <div class="column col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <h4 class="cardHeaders">$0.00/ <small>month</small> </h4>
+                    <h4>Free</h4>
+                    <p class="introTxt">For new web developers ready to create their first site.</p>
+                    <ul>
+                        <li><i class="bi bi-check"></i>Browse with ads</li>
+                        <li><i class="bi bi-check"></i>Build static sites</li>
+                        <li><i class="bi bi-check"></i>1 space</li>
+                        <li><i class="bi bi-check"></i>100 MB storage</li>
+                        <li><i class="bi bi-check"></i>75 MB data/month</li>
+                        <li><i class="bi bi-check"></i>500 request/month</li>
+                        <li><i class="bi bi-check"></i>myhost.com subdomain</li>
+                        <li><i class="bi bi-check"></i>SSL certificate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <h4 class="cardHeaders">$4.99/ <small>month</small> </h4>
+                    <h4>Basic</h4>
+                    <p class="introTxt">For those running one space with more traffic.</p>
+                    <ul>
+                        <li><i class="bi bi-check"></i>Browse with ads</li>
+                        <li><i class="bi bi-check"></i>Build static sites</li>
+                        <li><i class="bi bi-check"></i>1 space</li>
+                        <li><i class="bi bi-check"></i>1 GB storage</li>
+                        <li><i class="bi bi-check"></i>10 GB data/month</li>
+                        <li><i class="bi bi-check"></i>10 000 request/month</li>
+                        <li><i class="bi bi-check"></i>myhost.com subdomain</li>
+                        <li><i class="bi bi-check"></i>SSL certificate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <h4 class="cardHeaders">$8.99/ <small>month</small> </h4>
+                    <h4>Pro</h4>
+                    <p class="introTxt">For those running multiple spaces with more traffic.</p>
+                    <ul>
+                        <li><i class="bi bi-check"></i>Browse with ads</li>
+                        <li><i class="bi bi-check"></i>Build static sites</li>
+                        <li><i class="bi bi-check"></i>10 spaces</li>
+                        <li><i class="bi bi-check"></i>10 GB storage</li>
+                        <li><i class="bi bi-check"></i>100 GB data/month</li>
+                        <li><i class="bi bi-check"></i>100 000 request/month</li>
+                        <li><i class="bi bi-check"></i>myhost.com subdomain</li>
+                        <li><i class="bi bi-check"></i>SSL certificate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <h4 class="cardHeaders">$12.99/ <small>month</small> </h4>
+                    <h4>Free</h4>
+                    <p class="introTxt">For new web developers ready to create their first site.</p>
+                    <ul>
+                        <li><i class="bi bi-check"></i>Browse with ads</li>
+                        <li><i class="bi bi-check"></i>Build static sites</li>
+                        <li><i class="bi bi-check"></i>50 spaces</li>
+                        <li><i class="bi bi-check"></i>50 GB storage</li>
+                        <li><i class="bi bi-check"></i>500 GB data/month</li>
+                        <li><i class="bi bi-check"></i>500 000 request/month</li>
+                        <li><i class="bi bi-check"></i>myhost.com subdomain</li>
+                        <li><i class="bi bi-check"></i>SSL certificate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Part of the Page -->
-    <div class="container footer"></div>
+    <footer class="blockquote-footer">
+        <p class="footerTxt">2000 - 2022 MyHosting.All rights reserved. Cookie policy, Privacy and Terms.</p>
+        <p class="footerTxt ">Reporting abusive content help us keep Spaces aria.Help us by Reporting Abusive if you
+            find any</p>
+
+    </footer>
 
 </body>
 
