@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- These two are for responsive pages -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+                that make use of Javascript such as modals, tooltips, popovers etc.
+                However, if you just use the CSS part of Bootstrap, you don't need them. -->
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+                integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Product Page</title>
+        <style>
+                .container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr;
+                        gap: 0px 0px;
+                        grid-auto-flow: row;
+                        grid-template-areas:
+                                "leftSide rightSide";
+                }
+
+                .leftSide {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1.5fr 0.5fr;
+                        grid-auto-columns: 1fr;
+                        gap: 0px 0px;
+                        grid-auto-flow: row;
+                        grid-template-areas:
+                                "headphone-img"
+                                "headphone-info";
+                        grid-area: leftSide;
+                }
+
+
+                .headphone-info {
+                        display: grid;
+                        grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr;
+                        grid-template-rows: 1.1fr 0.9fr 1fr;
+                        gap: 0px 0px;
+                        grid-template-areas:
+                                ". . . ."
+                                ". . . ."
+                                ". . . .";
+                        grid-area: headphone-info;
+
+                }
+
+                .headphone-info div {
+                        position: relative;
+                        right: 10px;
+                }
+
+                .headphone-img {
+                        grid-area: headphone-img;
+                }
+
+                .rightSide {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 1fr 1fr 1fr;
+                        grid-auto-columns: 1fr;
+                        gap: 0px 0px;
+                        grid-auto-flow: row;
+                        grid-template-areas:
+                                "detailed-info-1"
+                                "detailed-info-2"
+                                "detailed-info-3"
+                                "detailed-info-4";
+                        grid-area: rightSide;
+                        background-color: #F5F5F5;
+                }
+
+                .detailed-info-1 {
+                        display: grid;
+                        grid-template-columns: 1.5fr 0.5fr;
+                        gap: 0px 0px;
+                        grid-area: detailed-info-1;
+                        margin-top: 20px;
+                        border-bottom: 1px solid #DDDDDD;
+                }
+
+                .detailed-info-2 {
+                        grid-area: detailed-info-2;
+                        border-bottom: 1px solid #DDDDDD;
+                }
+
+                .detailed-info-3 {
+                        grid-area: detailed-info-3;
+                        border-bottom: 1px solid #DDDDDD;
+                }
+
+                .detailed-info-4 {
+                        grid-area: detailed-info-4;
+                }
+
+                .pageContainer {
+                        margin-top: 1.25rem;
+                        border: 1px solid #EEEE;
+                        border-radius: 10px;
+                }
+
+                .info1-box-container {
+                        display: grid;
+                        border: 1px solid gray;
+                        grid-template-columns: auto auto auto;
+                        grid-template-rows: auto;
+                        background-color: white;
+                        padding: 5px;
+
+                }
+
+                .info1-box {
+                        border-right: 1px solid gray;
+                        display: flex;
+                        flex-direction: row;
+                        padding: 5px 5px 5px 5px;
+                }
+
+                .container-campaign p {
+                        color: #42A63F;
+                        white-space: nowrap;
+                        font-weight: 500;
+                        font-size: 14px;
+                        margin-top: 3%;
+                }
+
+                .total-point {
+                        background-color: #42A63F;
+                        color: white;
+                        width: 40px;
+                        height: 20px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        margin-top: 5%;
+                }
+
+                .total-campaigns {
+                        background-color: #F25C05;
+                        color: white;
+                        border-radius: 50%;
+                        height: 20px;
+                        width: 20px;
+                        box-sizing: border-box;
+                        font-size: 14px;
+                        text-align: center;
+                        position: relative;
+                        top: 3px;
+                        left: 3px;
+                }
+
+                .txt {
+                        font-size: small;
+                        font-weight: 500;
+                        white-space: nowrap;
+
+
+                }
+
+                .txt2 {
+                        white-space: nowrap;
+                        font-size: small;
+                }
+
+                .question-mark {
+                        height: 15px;
+                        width: 15px;
+                        background-color: #bbb;
+                        border-radius: 50%;
+                        color: black;
+                        font-size: 10px;
+                        margin-top: 8%;
+                        text-align: center;
+
+                }
+
+                .review-count {
+                        font-size: 10px;
+                        font-weight: 500;
+                        align-items: center;
+                        position: relative;
+                        left: 20%;
+                }
+
+                .stars-review-container {
+                        position: relative;
+                        top: 40%;
+                }
+
+                @media only screen and (max-width: 991px) {
+                        .pageContainer {
+                                display: block;
+                                width: 100%;
+                        }
+
+                        .leftSide {
+                                display: block;
+                                width: 100%;
+                        }
+
+                        .rightSide {
+                                display: block;
+                                width: 100%;
+
+                        }
+
+                        .product-name {
+                                display: none;
+                        }
+
+                        .stars-review-container {
+                                position: relative;
+                                right: 150px;
+                                top: 0px;
+                        }
+
+                        .product-price {
+                                position: relative;
+                                left: 50px;
+                        }
+
+                        .detailed-info-1 {
+                                border-bottom: 0;
+                        }
+
+                        .container-campaign {
+                                display: none;
+                        }
+
+                        /*.headphone-img{
+                                display: block;
+                                width: 100%;
+                        }
+                        .headphone-info{
+                                display: block;
+                                width: 100%;
+                        }
+                        
+                        .detailed-info-1{
+                                display: block;
+                                width: 100%;
+                        }
+                        .a{
+                                display: block;
+                                width: 100%; 
+                        }
+                        .stars-review-container{
+                                display: block;
+                                width: 100%;  
+                        }
+                        .info1-box-container{
+                                display: block;
+                                width: 100%;  
+                        } */
+                }
+
+                @media only screen and (min-width: 992px) {}
+
+
+                .col-minus,
+                .col-plus {
+                        box-sizing: border-box;
+                        text-align: center;
+                        color: black;
+                        font-weight: bold;
+                        background-color: #BFBFBF;
+                        width: 25px;
+                        height: 50px;
+                        line-height: 30px;
+                        margin: 0;
+                }
+
+                .col-num {
+                        box-sizing: border-box;
+                        text-align: center;
+                        color: black;
+                        font-weight: bold;
+                        background-color: white;
+                        width: 25px;
+                        height: 50px;
+                        line-height: 30px;
+                        font-size: xx-small;
+                        margin: 0;
+                }
+
+                .counter {
+                        display: flex-box;
+                        flex-direction: row;
+                        border-radius: 3px;
+                        border: 1px solid #BFBFBF;
+                        position: relative;
+                        top: 20px;
+                        left: 10px;
+                }
+                .btn-container{
+                        
+                }
+        </style>
+</head>
+
+<body>
+        <div class="container pageContainer">
+                <div class="leftSide">
+                        <div class="headphone-img"><img src="../Project2/P2-img/kulaklik.jfif"
+                                        alt="TWS i12 Bluetooth 5.0 Headphone">
+                        </div>
+
+                        <div class="headphone-info ">
+                                <div><strong>Çift telefon desteği</strong> </div>
+                                <div>Yok</div>
+                                <div><strong>Bluetooth Versiyon</strong></div>
+                                <div>5.0</div>
+                                <div><strong>Suya & Tere Dayanıklı</strong></div>
+                                <div>Hayır</div>
+                                <div><strong>Aktif gürültü Önleme(ANC)</strong></div>
+                                <div>Yok</div>
+                                <div><strong>Kullanım tipi</strong></div>
+                                <div>Kulakiçi</div>
+                        </div>
+                </div>
+                <div class="rightSide">
+                        <div class="detailed-info-1">
+
+                                <div class="a">
+                                        <h6 class="product-name">TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli</h6>
+                                        <p class="text-primary font-weight-bold product-name">TWS</p>
+                                        <p class="lead font-weight-bold product-price">115,00 TL</p>
+                                        <p>19 TL x 6 aya varan Taksitle</p>
+                                </div>
+                                <div class="stars-review-container">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                                <span>3,5</span>
+                                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
+                                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
+                                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
+                                                <i class="fa-regular fa-star-half-stroke flex-item"
+                                                        style="color: #F29F05;"></i>
+
+                                        </div>
+                                        <p class="review-count">7469 Değerlendirme</p>
+                                </div>
+
+
+                                <div class="info1-box-container">
+
+                                        <div class="info1-box ">
+
+                                                <span class="text-muted txt">Satıcı:<span class="text-primary txt2">SFIT
+                                                                TEKNOLOJI...</span></span>
+
+                                        </div>
+                                        <div class="info1-box">
+
+                                                <span class="text-muted txt">Puan</span>
+
+                                                <span class="total-point"> 9.4</span>
+                                                <span class="question-mark">?</span>
+
+
+                                        </div>
+                                        <div class="info1-box">
+                                                <span class="txt"> <strong>Kampanyaları Gör</strong> </span>
+                                                <span class="total-campaigns">3</span>
+
+                                        </div>
+
+                                </div>
+                                <br>
+                                <div class="container-campaign ">
+                                        <p>Seçili Telefon alana TWS i12 Bluetooth 5.0 Kulaklık %10 indirimli!</p>
+                                </div>
+
+
+                        </div>
+
+                        <div class="detailed-info-2">
+                                <div class="btn-container row">
+                                        <div class="col counter">
+                                                <div class=" col-minus">-</div>
+                                                <div class="col-num">1</div>
+                                                <div class="col-plus">+</div>
+                                        </div>
+                                </div>
+
+
+                        </div>
+                        <div class="detailed-info-3">
+
+
+                        </div>
+                        <div class="detailed-info-4"></div>
+                </div>
+        </div>
+
+</body>
+
+</html>
