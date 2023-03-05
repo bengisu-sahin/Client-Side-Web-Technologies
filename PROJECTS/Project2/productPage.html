@@ -2,417 +2,539 @@
 <html lang="en">
 
 <head>
-        <!-- These two are for responsive pages -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- These two are for responsive pages -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-        <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
-                that make use of Javascript such as modals, tooltips, popovers etc.
-                However, if you just use the CSS part of Bootstrap, you don't need them. -->
+    <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+            that make use of Javascript such as modals, tooltips, popovers etc.
+            However, if you just use the CSS part of Bootstrap, you don't need them. -->
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-                integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-                crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Product Page</title>
-        <style>
-                .container {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        grid-template-rows: 1fr;
-                        gap: 0px 0px;
-                        grid-auto-flow: row;
-                        grid-template-areas:
-                                "leftSide rightSide";
-                }
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Product Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-                .leftSide {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        grid-template-rows: 1.5fr 0.5fr;
-                        grid-auto-columns: 1fr;
-                        gap: 0px 0px;
-                        grid-auto-flow: row;
-                        grid-template-areas:
-                                "headphone-img"
-                                "headphone-info";
-                        grid-area: leftSide;
-                }
+        .productPage {
+            border: 1px solid #EEEE;
+            border-radius: 10px;
+            margin-top: 1.25rem;
+        }
 
+        .info-details {
+            border-bottom: 1px solid #DDDDDD;
+            margin-top: 1rem;
+        }
 
-                .headphone-info {
-                        display: grid;
-                        grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr;
-                        grid-template-rows: 1.1fr 0.9fr 1fr;
-                        gap: 0px 0px;
-                        grid-template-areas:
-                                ". . . ."
-                                ". . . ."
-                                ". . . .";
-                        grid-area: headphone-info;
+        .headphone-info-table {
+            display: grid;
+            grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr;
+            grid-template-rows: 1.1fr 0.9fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                ". . . ."
+                ". . . ."
+                ". . . .";
+            grid-area: headphone-info;
 
-                }
+        }
 
-                .headphone-info div {
-                        position: relative;
-                        right: 10px;
-                }
+        .headphone-info div {
+            position: relative;
+            right: 10px;
+        }
 
-                .headphone-img {
-                        grid-area: headphone-img;
-                }
+        .productNames h6 {
+            white-space: nowrap;
+        }
 
-                .rightSide {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        grid-template-rows: 1fr 1fr 1fr 1fr;
-                        grid-auto-columns: 1fr;
-                        gap: 0px 0px;
-                        grid-auto-flow: row;
-                        grid-template-areas:
-                                "detailed-info-1"
-                                "detailed-info-2"
-                                "detailed-info-3"
-                                "detailed-info-4";
-                        grid-area: rightSide;
-                        background-color: #F5F5F5;
-                }
+        .rightSide {
+            background-color: #F5F5F5;
+        }
 
-                .detailed-info-1 {
-                        display: grid;
-                        grid-template-columns: 1.5fr 0.5fr;
-                        gap: 0px 0px;
-                        grid-area: detailed-info-1;
-                        margin-top: 20px;
-                        border-bottom: 1px solid #DDDDDD;
-                }
+        .review-count {
+            font-size: 10px;
+            font-weight: bold;
+            text-align: right;
+            position: relative;
+            top: 0.25em;
+        }
 
-                .detailed-info-2 {
-                        grid-area: detailed-info-2;
-                        border-bottom: 1px solid #DDDDDD;
-                }
+        .taksit {
+            font-size: 12px;
+            position: relative;
+            bottom: 1em;
+            text-align: left;
+        }
 
-                .detailed-info-3 {
-                        grid-area: detailed-info-3;
-                        border-bottom: 1px solid #DDDDDD;
-                }
+        .campaign-info {
+            color: #42A63F;
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
 
-                .detailed-info-4 {
-                        grid-area: detailed-info-4;
-                }
+        .add-to-pocket-btn {
+            background-color: #F25C05;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            width: 161.5px;
+            height: 57px;
 
-                .pageContainer {
-                        margin-top: 1.25rem;
-                        border: 1px solid #EEEE;
-                        border-radius: 10px;
-                }
+        }
 
-                .info1-box-container {
-                        display: grid;
-                        border: 1px solid gray;
-                        grid-template-columns: auto auto auto;
-                        grid-template-rows: auto;
-                        background-color: white;
-                        padding: 5px;
+        .add-to-pocket-btn:hover {
+            filter: brightness(80%);
+        }
 
-                }
+        .inc {
+            width: 30px;
+            height: 40px;
+            line-height: 30px;
+            text-align: center;
+            background: #6f7277;
+            color: rgb(6, 4, 4);
+            cursor: pointer;
+            user-select: none;
+            display: block;
+            font-size: 25px;
+            border-top-right-radius: 20%;
+            border-bottom-right-radius: 20%;
+        }
 
-                .info1-box {
-                        border-right: 1px solid gray;
-                        display: flex;
-                        flex-direction: row;
-                        padding: 5px 5px 5px 5px;
-                }
+        .dec {
+            width: 30px;
+            height: 40px;
+            line-height: 30px;
+            text-align: center;
+            background: #6f7277;
+            color: rgb(6, 4, 4);
+            cursor: pointer;
+            user-select: none;
+            display: block;
+            font-size: 25px;
+            border-top-left-radius: 20%;
+            border-bottom-left-radius: 20%;
+        }
 
-                .container-campaign p {
-                        color: #42A63F;
-                        white-space: nowrap;
-                        font-weight: 500;
-                        font-size: 14px;
-                        margin-top: 3%;
-                }
+        .num {
+            width: 50px;
+            height: 40px;
+            border: 0;
+            line-height: 30px;
+            font-size: 20px;
+            text-align: center;
+            background: #e5e6e8;
+            appearance: none;
+            outline: 0;
+        }
 
-                .total-point {
-                        background-color: #42A63F;
-                        color: white;
-                        width: 40px;
-                        height: 20px;
-                        box-sizing: border-box;
-                        text-align: center;
-                        font-weight: bold;
-                        border-radius: 5px;
-                        font-size: 14px;
-                        margin-top: 5%;
-                }
+        .add-product {
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            box-sizing: border-box;
+        }
 
-                .total-campaigns {
-                        background-color: #F25C05;
-                        color: white;
-                        border-radius: 50%;
-                        height: 20px;
-                        width: 20px;
-                        box-sizing: border-box;
-                        font-size: 14px;
-                        text-align: center;
-                        position: relative;
-                        top: 3px;
-                        left: 3px;
-                }
+        @media only screen and (max-width: 991px) {
+            .productNames {
+                display: none;
+            }
 
-                .txt {
-                        font-size: small;
-                        font-weight: 500;
-                        white-space: nowrap;
+            .campaign-info {
+                display: none;
+            }
 
+            .price-review-payment {
+                margin-top: 5%;
+            }
 
-                }
+            .taksit {
+                text-align: center;
+            }
+        }
 
-                .txt2 {
-                        white-space: nowrap;
-                        font-size: small;
-                }
+        .container-od {
+            border: 1px solid gray;
+            width: 85%;
+        }
 
-                .question-mark {
-                        height: 15px;
-                        width: 15px;
-                        background-color: #bbb;
-                        border-radius: 50%;
-                        color: black;
-                        font-size: 10px;
-                        margin-top: 8%;
-                        text-align: center;
+        .total-point {
+            background-color: #42A63F;
+            color: white;
+            box-sizing: border-box;
+            text-align: left;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 14px;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
 
-                }
+        .question-mark {
+            background-color: #bbb;
+            border-radius: 50%;
+            color: black;
+            font-size: 14px;
+            text-align: center;
+            padding: 0.1em 0.3em 0.1em 0.3em;
+        }
 
-                .review-count {
-                        font-size: 10px;
-                        font-weight: 500;
-                        align-items: center;
-                        position: relative;
-                        left: 20%;
-                }
+        .total-campaigns {
+            background-color: #F25C05;
+            color: white;
+            border-radius: 50%;
+            box-sizing: border-box;
+            font-size: 14px;
+            text-align: center;
+            padding: 0.1em 0.3em 0.1em 0.3em;
+        }
 
-                .stars-review-container {
-                        position: relative;
-                        top: 40%;
-                }
+        .detail1,
+        .detail2,
+        .detail3 {
+            border-right: 1px solid gray;
+            width: 15em;
+        }
 
-                @media only screen and (max-width: 991px) {
-                        .pageContainer {
-                                display: block;
-                                width: 100%;
-                        }
-
-                        .leftSide {
-                                display: block;
-                                width: 100%;
-                        }
-
-                        .rightSide {
-                                display: block;
-                                width: 100%;
-
-                        }
-
-                        .product-name {
-                                display: none;
-                        }
-
-                        .stars-review-container {
-                                position: relative;
-                                right: 150px;
-                                top: 0px;
-                        }
-
-                        .product-price {
-                                position: relative;
-                                left: 50px;
-                        }
-
-                        .detailed-info-1 {
-                                border-bottom: 0;
-                        }
-
-                        .container-campaign {
-                                display: none;
-                        }
-
-                        /*.headphone-img{
-                                display: block;
-                                width: 100%;
-                        }
-                        .headphone-info{
-                                display: block;
-                                width: 100%;
-                        }
-                        
-                        .detailed-info-1{
-                                display: block;
-                                width: 100%;
-                        }
-                        .a{
-                                display: block;
-                                width: 100%; 
-                        }
-                        .stars-review-container{
-                                display: block;
-                                width: 100%;  
-                        }
-                        .info1-box-container{
-                                display: block;
-                                width: 100%;  
-                        } */
-                }
-
-                @media only screen and (min-width: 992px) {}
+        .other-details {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
 
 
-                .col-minus,
-                .col-plus {
-                        box-sizing: border-box;
-                        text-align: center;
-                        color: black;
-                        font-weight: bold;
-                        background-color: #BFBFBF;
-                        width: 25px;
-                        height: 50px;
-                        line-height: 30px;
-                        margin: 0;
-                }
+        .container-pro-ch {
+            background: #f0eaff;
+            border: 1px solid #cebaff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
-                .col-num {
-                        box-sizing: border-box;
-                        text-align: center;
-                        color: black;
-                        font-weight: bold;
-                        background-color: white;
-                        width: 25px;
-                        height: 50px;
-                        line-height: 30px;
-                        font-size: xx-small;
-                        margin: 0;
-                }
+        .product-changing-txt {
 
-                .counter {
-                        display: flex-box;
-                        flex-direction: row;
-                        border-radius: 3px;
-                        border: 1px solid #BFBFBF;
-                        position: relative;
-                        top: 20px;
-                        left: 10px;
-                }
-                .btn-container{
-                        
-                }
-        </style>
+            font-size: 14px;
+            align-items: center;
+        }
+
+        .product-changing-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: 0.1em;
+        }
+
+        .btn1 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            font-weight: 700;
+            color: #666;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        .btn2 {
+            background: #fff;
+            border: 1px solid #dadada;
+            box-sizing: border-box;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: .4px;
+            color: #000;
+            padding: 6px 7px;
+            margin-left: 13px;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .cards i {
+            margin-right: 20px;
+        }
+
+        .card-txt {
+            white-space: nowrap;
+            font-size: 10px;
+            margin-right: 2em;
+        }
+
+        .delivery-option {
+            background-color: white;
+            border-radius: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .other-vendors {
+            background-color: white;
+            border-radius: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .hepsiJET-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .location {
+            background-color: #FFEFE5;
+            color: #ff6000;
+            font-size: 12px;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            line-height: 16px;
+        }
+        .info-details-end{
+            height: 100px;
+            
+        }
+        .add-to-pocket-2{
+            box-sizing: border-box;
+            position: relative;
+left: 7%;
+        }
+        .other-price{
+            box-sizing: border-box;
+            position: relative;
+left: 12%;
+        }
+    </style>
 </head>
 
 <body>
-        <div class="container pageContainer">
-                <div class="leftSide">
-                        <div class="headphone-img"><img src="../Project2/P2-img/kulaklik.jfif"
-                                        alt="TWS i12 Bluetooth 5.0 Headphone">
-                        </div>
-
-                        <div class="headphone-info ">
-                                <div><strong>Çift telefon desteği</strong> </div>
-                                <div>Yok</div>
-                                <div><strong>Bluetooth Versiyon</strong></div>
-                                <div>5.0</div>
-                                <div><strong>Suya & Tere Dayanıklı</strong></div>
-                                <div>Hayır</div>
-                                <div><strong>Aktif gürültü Önleme(ANC)</strong></div>
-                                <div>Yok</div>
-                                <div><strong>Kullanım tipi</strong></div>
-                                <div>Kulakiçi</div>
-                        </div>
+    <div class="container productPage">
+        <div class="row">
+            <div class="col-lg-6 leftSide">
+                <div class="headphone-img row"><img src="../Project2/P2-img/kulaklik.jfif"
+                        alt="TWS i12 Bluetooth 5.0 Headphone"></div>
+                <div class="headphone-info-table row">
+                    <div class="info"><strong>Çift telefon desteği</strong></div>
+                    <div>Yok</div>
+                    <div class="info"><strong>Bluetooth Versiyon</strong></div>
+                    <div>5.0</div>
+                    <div class="info"><strong>Suya & Tere Dayanıklı</strong></div>
+                    <div>Hayır</div>
+                    <div class="info"><strong>Aktif gürültü Önleme(ANC)</strong> </div>
+                    <div> Yok</div>
+                    <div class="info"><strong>Kullanım tipi</strong> </div>
+                    <div> Kulakiçi</div>
                 </div>
-                <div class="rightSide">
-                        <div class="detailed-info-1">
-
-                                <div class="a">
-                                        <h6 class="product-name">TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli</h6>
-                                        <p class="text-primary font-weight-bold product-name">TWS</p>
-                                        <p class="lead font-weight-bold product-price">115,00 TL</p>
-                                        <p>19 TL x 6 aya varan Taksitle</p>
-                                </div>
-                                <div class="stars-review-container">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                                <span>3,5</span>
-                                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
-                                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
-                                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
-                                                <i class="fa-regular fa-star-half-stroke flex-item"
-                                                        style="color: #F29F05;"></i>
-
-                                        </div>
-                                        <p class="review-count">7469 Değerlendirme</p>
-                                </div>
-
-
-                                <div class="info1-box-container">
-
-                                        <div class="info1-box ">
-
-                                                <span class="text-muted txt">Satıcı:<span class="text-primary txt2">SFIT
-                                                                TEKNOLOJI...</span></span>
-
-                                        </div>
-                                        <div class="info1-box">
-
-                                                <span class="text-muted txt">Puan</span>
-
-                                                <span class="total-point"> 9.4</span>
-                                                <span class="question-mark">?</span>
-
-
-                                        </div>
-                                        <div class="info1-box">
-                                                <span class="txt"> <strong>Kampanyaları Gör</strong> </span>
-                                                <span class="total-campaigns">3</span>
-
-                                        </div>
-
-                                </div>
-                                <br>
-                                <div class="container-campaign ">
-                                        <p>Seçili Telefon alana TWS i12 Bluetooth 5.0 Kulaklık %10 indirimli!</p>
-                                </div>
-
+            </div>
+            <div class="col-lg-6 rightSide">
+                <div class="info-details">
+                    <div class="productNames">
+                        <h6 class="">TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli</h6>
+                        <p class="text-primary font-weight-bold">TWS</p>
+                    </div>
+                    <div class="price-review-payment">
+                        <div class="row ">
+                            <div class="col-6 ">
+                                <p class="lead font-weight-bold product-price text-left">115,00 TL</p>
+                            </div>
+                            <div class="col-6 stars text-right">
+                                <span>3,5</span>
+                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
+                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
+                                <i class="fa-solid fa-star" style="color: #F29F05;"></i>
+                                <i class="fa-regular fa-star-half-stroke flex-item" style="color: #F29F05;"></i>
+                                <div class=" review-count text-right">7469 Değerlendirme</div>
+                            </div>
+                            <div class="col-12 taksit  "><span> 19 TL x 6 aya varan <strong> Taksitle</strong></span>
+                            </div>
 
                         </div>
+                        <div class="other-details">
+                            <div class="container-od d-flex">
 
-                        <div class="detailed-info-2">
-                                <div class="btn-container row">
-                                        <div class="col counter">
-                                                <div class=" col-minus">-</div>
-                                                <div class="col-num">1</div>
-                                                <div class="col-plus">+</div>
-                                        </div>
+                                <div class="detail1">
+                                    <span class="text-muted" style="font-size: 14px;">Satıcı</span>
+                                    <span class="text-primary" style="font-size: 14px;">SFIT TEKNOLOJI...</span>
                                 </div>
+                                <div class="detail2">
+                                    <span class="text-muted " style="font-size: 14px;">Puan</span>
+                                    <span class="total-point" style="font-size: 14px;"> 9.4</span>
+                                    <span class="question-mark" style="font-size: 14px;">?</span>
 
-
+                                </div>
+                                <div class="detail3">
+                                    <span class="txt" style="font-size: 14px;"> <strong>Kampanyaları Gör</strong>
+                                    </span>
+                                    <span class="total-campaigns" style="font-size: 14px;">3</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="detailed-info-3">
-
-
+                        <div class="campaign-info"> Seçili Telefon alana TWS i12 Bluetooth 5.0 Kulaklık %10 indirimli!
                         </div>
-                        <div class="detailed-info-4"></div>
+
+                    </div>
                 </div>
+                <div class="info-details">
+                    <div class="container buttons-container">
+                        <div class="row">
+                            <div class="col-6 add-product">
+                                <span class="dec">-</span>
+                                <span class="text num">1</span>
+                                <span class="inc">+</span>
+
+                                <div class="col-6 add-pocket"><button class="add-to-pocket-btn"
+                                        onclick="addToPocket()"><i
+                                            class="shopping-card fa-solid fa-cart-shopping"></i>Sepete Ekle</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="product-changing">
+                            <div class="container-pro-ch d-flex">
+                                <div class=" product-changing-txt">Eski ürünü yenisi ile değiştirmek ister misin?
+                                </div>
+                                <div class="product-changing-buttons">
+                                    <div class="btn1">?</div>
+                                    <div class="btn2">Faydaları</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <i class="fa-regular fa-heart "></i>
+                                <span class="card-txt">Beğen</span>
+                            </div>
+                            <div class="col-3">
+                                <i class="fa-regular fa-bookmark "></i>
+                                <span class="card-txt">Listeme Ekle</span>
+                            </div>
+                            <div class="col-3">
+                                <i class="fa-solid fa-arrow-right-arrow-left "></i>
+                                <span class="card-txt">Karşılaştır</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="info-details">
+                    <div class="delivery-option">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <span style="font-weight: 600; font-size: 14px;">Teslimat Seçenekleri</span>
+                                </div>
+                                <div class="col-6">
+                                    <div class="location">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <span>Konum Seç</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <span style="font-weight: 600; font-size: 12px;">Standar Teslimat</span><br>
+                                    <span class="text-muted"
+                                        style="font-size: 10px; position: relative; bottom: 1em;">En geç <strong>14 Ekim
+                                            Cuma</strong> günü kargoda</span>
+                                </div>
+                                <div class="col-6 d-flex hepsiJET-logo">
+                                    <img src="../Project2/P2-img/hepsijet.jpg" alt="hepsiJET Logo" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-details">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <span style="font-weight: 600;">Diğer Satıcılar - </span>
+                                <span style="color: #ff6000;">Tümü(2)</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="question-mark" style="font-size: 14px; float: right;">?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-details">
+                    <div class="other-vendors">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="total-point" style="font-size: 14px;"> 9.7</span>
+                                    <span style="font-size: smaller; color: #778EDA; font-weight: 600;">Torima</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <span style=" margin-left: 0.5em;margin-top: 2px;font-size: xx-small; white-space: nowrap;"><strong>21 saat 42 dakika</strong>içinde
+                                            sipariş
+                                            verirsen yarın kargoda</span>
+                                    </div>
+                            <div class="col-1 ">
+                                <span style="font-size:xx-small; white-space: nowrap; margin-left: 0;"><strong>148,97 TL</strong></span>
+                            </div>
+                                    <div class="col-3 add-to-pocket-2">
+                                        
+                                        <button style="width: 100px; height: 33px; padding: 1px; " class="add-to-pocket-btn" onclick="addToPocket()"><span style="font-size:xx-small;" >Sepete Ekle</span> </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-details-end">
+
+                </div>
+            </div>
         </div>
-
+    </div>
 </body>
 
 </html>
