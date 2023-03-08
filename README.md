@@ -68,3 +68,9 @@ You can then use the “check” icon as follows:
 
 
 Finally, there is a footer section at the bottom of the page that spans the full width of the screen for all screen sizes.
+
+
+#### Problem 2: Implement a Responsive Product Page
+In this problem, you are asked to implement a responsive product page from “hepsiburada.com” that responds to two screen sizes as follows:
+
+![image]('C:\Users\asus\OneDrive\Masaüstü\size.png')
