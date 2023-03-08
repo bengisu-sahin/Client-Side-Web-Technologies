@@ -46,7 +46,6 @@ In this problem, you are asked to implement a responsive landing page for three 
 
 ![image](https://user-images.githubusercontent.com/71591780/221375136-b1406d72-fdcd-4afa-8c4a-3536668080c5.png)
 
-
 The page consists of 5 sections: A header, 3 main sections, and a footer, all stacked vertically on top of each other. Here is how the page will look like for different screen sizes:
 
 ![image](https://user-images.githubusercontent.com/71591780/221375315-e528caca-22a4-422b-aaac-7b34680a4964.png)
@@ -71,6 +70,8 @@ Finally, there is a footer section at the bottom of the page that spans the full
 
 
 #### Problem 2: Implement a Responsive Product Page
-In this problem, you are asked to implement a responsive product page from “hepsiburada.com” that responds to two screen sizes as follows:
+In this problem, you are asked to implement a responsive product page from “hepsiburada.com” that responds to two screen sizes as follows:Small an medium is smaller than 992 and large screens shoul be bigger or equal than 992 pixels. Here is how the page will look like for the two screen sizes (name your page productPage.html):
 
-![image]('C:\Users\asus\OneDrive\Masaüstü\size.png')
+![image](https://user-images.githubusercontent.com/71591780/223828140-aea361f5-cca4-4ce1-9d8e-6a058d224239.png)
+
+
