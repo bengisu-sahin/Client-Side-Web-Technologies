@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validatio</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" minlength="3" maxlength="8" placeholder="Bengisu"
+                pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,8}" required>
+        </div>
+
+        <div>
+            <label for="id">Id:</label>
+            <input type="number" name="id" id="id" min="200" max="750" placeholder="200" required /><br>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script src="s1.js"></script>
+</body>
+
+</html>
