@@ -19,3 +19,6 @@ for (let i = 0; i < all.length; i++) {
     console.log('======================');
 }
 console.log('-----------------------------------------------');
+//print body's children 
+const body=document.body;
+console.log(`body has ${body.children.length} children`);
