@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-     <!-- Latest compiled and minified CSS -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-     <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+    <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
              that make use of Javascript such as modals, tooltips, popovers etc.
              However, if you just use the CSS part of Bootstrap, you don't need them. -->
- 
-     <!-- jQuery library -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
-     <!-- Popper JS -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
- 
-     <!-- Latest compiled JavaScript -->
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
@@ -28,36 +28,25 @@
 
 <body>
 
-     <div class="header">DIGITAL CLOCK</div>
-    <div class="parent container">
-        <div class="row">
-            <div class="col-10">headerr</div>
-            <div class="col-3 purple-box content">pp</div>
-            <div class="col-3 purple-box content">pp</div>
-            <div class="col-3 purple-box content">pp</div>
-            <div class="col-3 blue-box content">bb</div>
-            <div class="col-3 blue-box content">bb</div>
-            <div class="col-3 blue-box content">bb</div>
-            <div class="col-1 am-pm content">pm</div>
-        </div>
-    </div>
-
-    <!-- <div class="container">
+    <div class="clock-container">
+        <div class="content"><div class="header">DIGITAL CLOCK</div></div>
         <div class="content ">
-            <div class=" purple-box">dd</div>
+            <div class=" purple-box" id="hour"></div>
             <div class="blue-box">HOURS</div>
         </div>
         <div class="content ">
-            <div class="purple-box">dd</div>
+            <div class="purple-box" id="min"></div>
             <div class="blue-box">MINUTES</div>
         </div>
         <div class="content">
-            <div class=" purple-box">dd</div>
+            <div class=" purple-box" id="sec"></div>
             <div class=" blue-box">SECONDS</div>
         </div>
-        <div class=" am-pm">fds</div>
-    </div>  -->
-
+        <div class="content">
+            <div class=" am-pm " id="am-pm"></div>
+        </div>
+    </div>
+    
     <script src="clock.js"></script>
 </body>
 
