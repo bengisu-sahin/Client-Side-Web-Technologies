@@ -28,7 +28,7 @@
     border-bottom-left-radius: 5px;
 }
 
-.leftSide div {
+/* .leftSide div {
     border: 5px solid white;
     border-radius: 5px;
     background-color: white;
@@ -39,12 +39,14 @@
     border: 5px solid white;
     border-radius: 5px;
     background-color: white;
-}
+} */
 .mainContainer hr{
     margin: 0;
     padding: 0;
 }
-.num{
-    
-    width: 10px;
+/* .boxes{
+    float: right;
 }
+.lesson{
+    margin-top: 50px;
+} */
