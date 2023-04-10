@@ -134,13 +134,28 @@ th {
     font-weight: bolder;
     margin-top: 5px;
 }
+
 .input-net input {
-    border: none;/* kenarlık yok */   
+    border: none;
+    /* kenarlık yok */
     text-align: center;
     color: #2e3750;
     font-weight: bolder;
     margin-top: 5px;
 }
-.buttons{
+
+/* Artırma ve azaltma oklarının kaldırılması */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox'ta artırma/azaltma oklarını kaldırmak için */
+}
+
+.buttons {
     margin-top: 20px;
 }
