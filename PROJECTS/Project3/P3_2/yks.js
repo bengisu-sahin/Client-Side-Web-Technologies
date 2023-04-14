@@ -20,11 +20,20 @@ function makeAlert(dogru, yanlis, toplamSoru) {
 }
 
 const inputs = document.querySelectorAll('input');
+
 inputs.forEach(input => {
     input.addEventListener('change', function () {
         let className = input.className;
         let ders = dersler.find(obj => obj.dersAdi === className);
-        console.log(ders.dersAdi);
+        if (input.id == "diplamaNotu") {
+            const diplomaNotu = document.getElementById("diplamaNotu").value;
+           if(diplomaNotu > 100 || diplomaNotu < 0) window.alert("Diploma notu 0-100 aralığında olmalıdır.")
+           else{
+            const obpPuan = document.getElementById("obp-puan");
+            obpPuan.value = Number(diplomaNotu) * 5;
+           }
+            
+        }
         if (ders) {
             ders.dogru = Number(document.getElementById(ders.dersAdi + 'Dogru').value);
             ders.yanlis = Number(document.getElementById(ders.dersAdi + 'Yanlis').value);
@@ -35,6 +44,7 @@ inputs.forEach(input => {
             }
             else {
                 document.getElementById(ders.dersAdi + 'Net').value = showNet(ders);
+                ders.net = showNet(ders);
             }
         }
     });
