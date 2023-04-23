@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>First React App with JSX</title>
+    <!-- Load React API -->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!-- Load React DOM-->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- Load Babel Compiler -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+    <div id="root"></div>
+    <script>
+        const firstName="Bengisu";
+        const lastName="Şahin";
+        //create our elements in React DOM. {} is for properties such as CSS styling
+        const el1=React.createElement("h1",{style:{color:"pink"}},"My first name is:" + firstName);
+        const el2=React.createElement("h1", {}, "My last name is: " + lastName);
+        const container = React.createElement("div", {}, el1, el2);
+        //Finally render the React DOM on the web page
+        ReactDOM.render(container,document.getElementById("root"));
+    </script>
+<body>
+
+</body>
+
+</html>
