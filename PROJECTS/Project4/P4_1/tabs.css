@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: pink;
+    width: 500px;
+    margin: 0 auto;
+    /* sağdan ve soldan tam ortada olması icin bu kodu yazdık container genişliği sabitse ve responsive design da istenmediği için bunu kullanıyoruz*/
+    height: auto;
+}
+
+.btn-row {
+    background-color: gainsboro;
+    
+}
+
+.btn-row button {
+    background-color: gainsboro;
+    outline: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    padding: 20px;
+    text-align: left;
+}
+
+.btn-row button :last-child{
+    border: none;
+}
+
+#content {
+    margin: 0 auto;
+}
+
+.cell {
+    padding: 3px;
+}

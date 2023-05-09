@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- The following Javascript libraries are necessary only if you are using Bootstrap components
+            that make use of Javascript such as modals, tooltips, popovers etc.
+            However, if you just use the CSS part of Bootstrap, you don't need them. -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tabs Project</title>
+    <link rel="stylesheet" href="tabs.css">
+</head>
+
+
+<body onload="loadThePage()"> <!-- sayfa ilk yüklendiğinde tab1 in gözükmesi isteniyor bu sebeple bu işlemi yaptım -->
+    <div class="container">
+        <div class="row btn-row">
+            <div class="col-3 ">
+                <button class="btn-block " id="1" onclick="tabClick(1)">Tab1</button>
+
+            </div>
+            <div class="col-3">
+                <button class="btn-block" id="2" onclick="tabClick(2)">Tab2</button>
+            </div>
+            <div class="col-3">
+                <button class="btn-block" id="3" onclick="tabClick(3)">Tab3</button>
+            </div>
+            <div class="col-3">
+                <button class="btn-block" id="4" onclick="tabClick(4)" style="border: none;" >Tab4</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="content">
+              
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="tabs.js"></script>
+</body>
+
+</html>
