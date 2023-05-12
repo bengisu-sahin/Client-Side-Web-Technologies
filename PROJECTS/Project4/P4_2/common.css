@@ -1,0 +1,145 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+button{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #cecbcb;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+.container {
+    margin: 0 auto;
+    width: 360px;
+    height: 360px;
+    background-color: #EEEEEE;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30px 100px repeat(4, 50px);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 5px 5px ;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    grid-template-areas:
+        "header header header header"
+        "screen screen screen screen"
+        "btn-7 btn-8 btn-9 btn-division"
+        "btn-4 btn-5 btn-6 btn-mult"
+        "btn-1 btn-2 btn-3 btn-minus"
+        "btn-0 btn-C btn-equal btn-plus";
+        
+}
+
+.screen {
+    grid-area: screen;
+    height: 100px;
+}
+
+.btn-0 {
+    grid-area: btn-0;
+}
+
+.btn-C {
+    grid-area: btn-C;
+}
+
+.btn-equal {
+    grid-area: btn-equal;
+}
+
+.btn-plus {
+    grid-area: btn-plus;
+}
+
+.btn-minus {
+    grid-area: btn-minus;
+}
+
+.btn-mult {
+    grid-area: btn-mult;
+}
+
+.btn-division {
+    grid-area: btn-division;
+}
+
+.btn-7 {
+    grid-area: btn-7;
+}
+
+.btn-8 {
+    grid-area: btn-8;
+}
+
+.btn-9 {
+    grid-area: btn-9;
+}
+
+.btn-4 {
+    grid-area: btn-4;
+}
+
+.btn-5 {
+    grid-area: btn-5;
+}
+
+.btn-6 {
+    grid-area: btn-6;
+}
+
+.btn-1 {
+    grid-area: btn-1;
+}
+
+.btn-2 {
+    grid-area: btn-2;
+}
+
+.btn-3 {
+    grid-area: btn-3;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "app-name icons";
+    grid-area: header;
+    height: 30px;
+}
+
+.app-name {
+    grid-area: app-name;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 7px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "refresh-icon mode-icon";
+    grid-area: icons;
+}
+
+.refresh-icon {
+    grid-area: refresh-icon;
+}
+
+.mode-icon {
+    grid-area: mode-icon;
+}
