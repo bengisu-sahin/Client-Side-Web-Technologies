@@ -12,8 +12,6 @@ button{
     height: 50px;
     width: 100%;
     border-radius: 10px;
-    background-color: #cecbcb;
-    color: black;
     font-size: large;
     font-weight: bold;
 }
@@ -21,7 +19,6 @@ button{
     margin: 0 auto;
     width: 360px;
     height: 360px;
-    background-color: #EEEEEE;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 30px 100px repeat(4, 50px);
@@ -129,17 +126,36 @@ button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 7px 5px;
+    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "refresh-icon mode-icon";
     grid-area: icons;
+    
 }
 
 .refresh-icon {
     grid-area: refresh-icon;
+    /* width=100px statetement is probably wrong about clean code and desgin,but I can't figure out how can I put the refresh icon near the sun icon. */
+    width: 100px;          
 }
 
 .mode-icon {
-    grid-area: mode-icon;
+    grid-area: mode-icon; 
 }
+
+.icons button{
+    background-color: inherit;
+    width: 18px;
+    height: 18px;
+    border-radius: 0;
+    float: right;
+    
+}
+.icons button i {
+   
+    font-size: inherit;
+   
+  }
+
+  

@@ -1,0 +1,16 @@
+.container{
+    background-color:#333333;
+}
+button{
+    background-color: #555555;
+    border: none;
+    color: #eeeeee;
+}
+.app-name{
+    color: #eeeeee;
+    font-size: larger;
+}
+.screen{
+    background-color: #1574b4;
+    border: 5px solid #eeeeee;
+}

@@ -1,0 +1,16 @@
+.container{
+    background-color:#F1F1F1;
+}
+button{
+    background-color: #cccccc;
+    border: none;
+    color: black;
+}
+.app-name{
+    color: black;
+    font-size: larger;
+}
+.screen{
+    background-color: #77c0ed;
+    border: 5px solid black;
+}
