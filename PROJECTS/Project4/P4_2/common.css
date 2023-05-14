@@ -150,7 +150,7 @@ button{
     height: 18px;
     border-radius: 0;
     float: right;
-    
+    outline: none;
 }
 .icons button i {
    
