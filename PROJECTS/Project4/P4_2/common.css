@@ -158,4 +158,7 @@ button{
    
   }
 
-  
+.screen{
+    color: black;
+    text-align: right;
+}
