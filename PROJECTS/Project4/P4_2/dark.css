@@ -11,6 +11,7 @@ button{
     font-size: larger;
 }
 .screen{
+    color: white;
     background-color: #1574b4;
     border: 5px solid #eeeeee;
 }
